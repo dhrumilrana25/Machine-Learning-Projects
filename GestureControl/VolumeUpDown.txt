@@ -1,0 +1,25 @@
+The script captures video from the default camera (webcam) and detects hand landmarks using the Mediapipe library. It then calculates the Euclidean distance between two specific hand landmarks, the tip of the thumb, and the tip of the index finger (id 8 and id 4). The distance between these two points is used to determine the hand gesture.
+
+If the distance is greater than a defined threshold, the script sends a "volume up" key press event using PyAutoGUI. If the distance is smaller than the threshold, the script sends a "volume down" key press event.
+
+Guide:
+To use this script, follow these steps:
+
+Install the required libraries:
+
+OpenCV: pip install opencv-python
+Mediapipe: pip install mediapipe
+PyAutoGUI: pip install pyautogui
+Save the provided code into a Python script file (e.g., hand_volume_control.py).
+
+Run the Python script with your Python interpreter.
+
+The script will access your webcam and display the camera feed with hand landmarks drawn on it.
+
+Make sure your hand is visible in the camera feed. The tips of your thumb and index finger should be clearly visible.
+
+To control the volume, bring your thumb and index finger together to trigger a "volume down" action, and move them apart to trigger a "volume up" action.
+
+Adjust the threshold value in the script to control the sensitivity of the volume control. A larger threshold value will require a larger distance between your thumb and index finger to trigger a volume change.
+
+Press the "Esc" key to exit the script and stop controlling the volume.
